@@ -1,0 +1,22 @@
+{
+  "name": "Balbalan App",
+  "short_name": "Balbalan",
+  "description": "Aplikasi PWA sepak bola dunia",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#EE6E73",
+  "theme_color": "#EE6E73",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "gcm_sender_id": "658498489507"
+}

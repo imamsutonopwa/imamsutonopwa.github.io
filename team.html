@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FootballApp</title>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#EE6E73">
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo" id="logo-container">BalbalanApp</a>
+          <a class="waves-effect sidenav-trigger" onclick="history.back()"><i class="material-icons">arrow_back</i></a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="row red lighten-3" style="padding: 20px 0;">
+      <div class="col s3">
+        <img id="badge" width="100%" style="margin-top: 1vh;">
+      </div>
+      <div class="col s9">
+        <h5 id="name"></h5>
+        <span id="area"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <b>Alamat</b><br>
+        <span id="address"></span>
+        <p>
+          <b>Stadion</b><br>
+          <span id="venue"></span>
+        </p>
+        <p>
+          <b>E-mail</b><br>
+          <span id="email"></span>
+        </p>
+        <p>
+          <b>No. Telepon</b><br>
+          <span id="phone"></span>
+        </p>
+        <p>
+          <b>Website</b><br>
+          <span id="website"></span>
+        </p>
+
+        <b>Daftar Pemain</b>
+        <ul id="players" class="collection"></ul>
+      </div>
+    </div>
+
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large waves-effect red" id="fav-btn">
+        <i id="fav-icon" class="large material-icons">favorite_border</i>
+      </a>
+    </div>
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/idb.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/team.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function() {
+        getTeamDetail();
+        document.getElementById('fav-btn').onclick = function() { favorite(); }
+      });
+    </script>
+  </body>
+</html>
